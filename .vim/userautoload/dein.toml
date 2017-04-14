@@ -1,0 +1,13 @@
+# vimproc : 非同期処理
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+# vimshell: シェル
+[[plugins]]
+repo = 'Shougo/vimshell.vim'
+
+# vimfiler: ファイラー
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+
