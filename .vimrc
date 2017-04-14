@@ -63,8 +63,24 @@ nmap <ESC><ESC> :nohlsearch<CR><ESC>
 nmap <C-T><C-N> :tabnext<CR><ESC>
 nmap <C-T><C-P> :tabprevious<CR><ESC>
 
-" VimShell関連Map
+" VimShell関連 ------
 nnoremap [vimshell] <Nop>
 nmap <Leader>c [vimshell]
 nnoremap <silent> [vimshell]c :VimShell<CR>
+
+" VimFiler関連 ------
+nnoremap [vimfiler] <Nop>
+nmap <Leader>f [vimfiler]
+nnoremap <silent> [vimfiler]c :VimFilerBufferDir<CR>
+
+" unite関連 ------
+nnoremap [unite] <Nop>
+nmap <Leader>u [unite]
+nnoremap <silent> [unite]u :Unite file_mru<CR>
+
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+
+let g:unite_enable_start_insert = 1
+let g:unite_source_file_mru_limit = 1000
 

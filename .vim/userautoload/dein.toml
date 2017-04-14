@@ -11,3 +11,11 @@ repo = 'Shougo/vimshell.vim'
 [[plugins]]
 repo = 'Shougo/vimfiler.vim'
 
+# unite: UI統合
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+# mru: 最近開いたファイル取得
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
