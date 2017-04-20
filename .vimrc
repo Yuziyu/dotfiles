@@ -46,6 +46,12 @@ set smartindent
 " タブ、スペースの間隔設定
 set ts=4 sw=4 sts=4
 
+" undoファイルの置き場所定義
+set undodir=~/.vim/backup/vimundo
+
+" swapファイルの置き場所定義
+set directory =~/.vim/backup/swap
+
 "---------------------------------
 " 操作関連
 "---------------------------------
@@ -63,24 +69,27 @@ nmap <ESC><ESC> :nohlsearch<CR><ESC>
 nmap <C-T><C-N> :tabnext<CR><ESC>
 nmap <C-T><C-P> :tabprevious<CR><ESC>
 
-" VimShell関連 ------
+"------------ VimShell関連 ------------
 nnoremap [vimshell] <Nop>
 nmap <Leader>c [vimshell]
-nnoremap <silent> [vimshell]c :VimShell<CR>
+nnoremap <silent> [vimshell]c :VimShell<CR>										" [cc] vimshellを開く
 
-" VimFiler関連 ------
+"------------ VimFiler関連 ------------
 nnoremap [vimfiler] <Nop>
 nmap <Leader>f [vimfiler]
-nnoremap <silent> [vimfiler]c :VimFilerBufferDir<CR>
+nnoremap <silent> [vimfiler]c :VimFilerBufferDir<CR>							" [fc] ファイラーを開く
 
-" unite関連 ------
+let g:vimfiler_safe_mode_by_default = 0											" vimfilerの安全モードはoff
+let g:vimfiler_data_directory = '~/.vim/backup/vimfiler'						" vimfilerのバックアップディレクトリ定義
+
+"------------ unite関連 ------------
 nnoremap [unite] <Nop>
 nmap <Leader>u [unite]
-nnoremap <silent> [unite]u :Unite file_mru<CR>
+nnoremap <silent> [unite]u :Unite file_mru<CR>									" [uu] ファイル履歴を開く
 
-au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
-au FileType unite nnoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>					" ESC2回押しでuniteを閉じる
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>				" ESC2回押しでuniteを閉じる
 
-let g:unite_enable_start_insert = 1
-let g:unite_source_file_mru_limit = 1000
-
+let g:unite_enable_start_insert = 1												" 入力状態でuniteを起動
+let g:unite_source_file_mru_limit = 1000										" ファイル履歴上限を1000に設定
+let g:unite_data_directory = '~/.vim/backup/unite'								" uniteのバックファップディレクトリ定義

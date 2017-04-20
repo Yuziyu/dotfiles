@@ -1,2 +1,6 @@
 # dein本体とそのプラグインはgit管理しない
 .vim/dein
+
+# backupフォルダ配下は.gitkeepを除いてgit管理しない
+.vim/backup
+!.vim/backup/*/.gitkeep
