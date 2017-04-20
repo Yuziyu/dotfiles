@@ -72,12 +72,12 @@ nmap <C-T><C-P> :tabprevious<CR><ESC>
 "------------ VimShell関連 ------------
 nnoremap [vimshell] <Nop>
 nmap <Leader>c [vimshell]
-nnoremap <silent> [vimshell]c :VimShell<CR>										" [cc] vimshellを開く
+nnoremap <silent> [vimshell]c :VimShell<CR>
 
 "------------ VimFiler関連 ------------
 nnoremap [vimfiler] <Nop>
 nmap <Leader>f [vimfiler]
-nnoremap <silent> [vimfiler]c :VimFilerBufferDir<CR>							" [fc] ファイラーを開く
+nnoremap <silent> [vimfiler]c :VimFilerBufferDir<CR>
 
 let g:vimfiler_safe_mode_by_default = 0											" vimfilerの安全モードはoff
 let g:vimfiler_data_directory = '~/.vim/backup/vimfiler'						" vimfilerのバックアップディレクトリ定義
@@ -85,7 +85,7 @@ let g:vimfiler_data_directory = '~/.vim/backup/vimfiler'						" vimfilerのバ�
 "------------ unite関連 ------------
 nnoremap [unite] <Nop>
 nmap <Leader>u [unite]
-nnoremap <silent> [unite]u :Unite file_mru<CR>									" [uu] ファイル履歴を開く
+nnoremap <silent> [unite]u :Unite file_mru<CR>
 
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>					" ESC2回押しでuniteを閉じる
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>				" ESC2回押しでuniteを閉じる
