@@ -74,6 +74,8 @@ nnoremap [vimshell] <Nop>
 nmap <Leader>c [vimshell]
 nnoremap <silent> [vimshell]c :VimShell<CR>
 
+let g:vimshell_no_save_history_commands = {}									" historyに保存しないコマンドリスト({}ですべてのコマンド保存)
+
 "------------ VimFiler関連 ------------
 nnoremap [vimfiler] <Nop>
 nmap <Leader>f [vimfiler]
