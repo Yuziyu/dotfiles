@@ -4,3 +4,26 @@
 # backupフォルダ配下は.gitkeepを除いてgit管理しない
 .vim/backup
 !.vim/backup/*/.gitkeep
+
+
+# /直下は基本的に全て除外
+.CFUserTextEncoding
+.DS_Store
+.bash_history
+.bash_sessions/
+.cache/
+.config/
+.local/
+.ssh/
+.viminfo
+.zcompdump
+.zsh_history
+Applications/
+Desktop/
+Documents/
+Downloads/
+Library/
+Movies/
+Music/
+Pictures/
+Public/
